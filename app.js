@@ -8,12 +8,13 @@ const PORT = process.env.PORT || 5000;
 const products_routes = require("./routes/products");
 
 
-app.get("/", (req, res ) => { 
-    res.send("Hi, I am Live ");
-}); 
+// app.get("/", (req, res ) => { 
+//     res.send("Hi, I am Live ");
+// }); 
 
 //middleware or to set router
-app.use("/api/products", products_routes);
+// app.use("/api/products", products_routes);
+app.use("/", products_routes);
 
 const start = async() => {
     try{
